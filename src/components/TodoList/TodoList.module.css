@@ -1,0 +1,32 @@
+.btn{
+	margin-left: 12px;
+}
+
+.listItems{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	margin-top: 24px;
+	padding: 6px;
+	transition: background 0.3s;
+}
+
+.listItems:hover{
+	background:#c9dbfa;
+	border-radius: 6px;
+
+}
+.close{
+	text-decoration: line-through;
+	color: gray;
+}
+
+.filter{
+	display: flex;
+	justify-content: left;
+	padding-top: 12px;
+}
+
+.btns{
+	
+}

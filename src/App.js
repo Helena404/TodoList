@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import AddTodo from './components/AddTodo/AddTodo';
+import Header from './components/Header/Header';
+import TodoList from './components/TodoList/TodoList';
+import { Container } from 'react-bootstrap';
+
 
 function App() {
+
+	const [todo,setTodo] = useState([
+		{
+			id:1,
+			title: "First task",
+			status: true
+		},
+		{
+			id:2,
+			title: "Second task",
+			status: true
+		},
+		{
+			id:3,
+			title: "Third task",
+			status: false
+		}
+	]
+	)
+
+	console.log(todo)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+		<Header/>
+		<AddTodo todo={todo} setTodo={setTodo}/>
+		<TodoList todo={todo} setTodo={setTodo}/>
+    </Container>
   );
 }
 
